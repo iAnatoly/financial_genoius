@@ -1,10 +1,15 @@
 import random
 
+"""
+This script emulates a creation of a financil genius. 
+Run until you find one (usually 1-3 runs is enough to discover your genius).
+"""
+
 def is_winner():
     return random.random() < 0.5
 
 num_players = 1024
-num_rounds = 10
+num_rounds = 10 # log2(1024)
 
 winnings = [0] * num_players
 
