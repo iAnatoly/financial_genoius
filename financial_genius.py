@@ -20,11 +20,12 @@ for round in range(num_rounds):
         if is_winner():
             winnings[player] += 1
 
+# Print the list of highest winners in descending order
+
 highest_winners = sorted(range(num_players), key=lambda i: winnings[i], reverse=True)[:10]
 
-# Print the list of highest winners in descending order
 print("The 10 highest winners are:")
 for i, player in enumerate(highest_winners):
     print(f"{i+1}. Player {player+1} with {winnings[player]} winnings")
     if winnings[player]==num_rounds:
-        print('  ^^^ found Warren Buffet')
+        print("  ^^^ found Warren Buffet")
